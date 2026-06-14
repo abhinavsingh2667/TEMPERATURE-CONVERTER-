@@ -1,0 +1,48 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    //Choice which you have to enter.
+
+    int choice;
+    double temp, result;
+
+    //Temperature Converter.
+    cout << "Temperature Converter\n";
+    cout << "1. Celsius to Fahrenheit\n";
+    cout << "2. Fahrenheit to Celsius\n";
+    cout << "3. Celsius to Kelvin\n";
+    cout << "4. Kelvin to Celsius\n";
+    cout << "Enter your choice: ";
+    cin >> choice;
+    
+    //Choice enter by user.
+    if (choice == 1) {
+        cout << "Enter temperature in Celsius: ";
+        cin >> temp;
+        result = (temp * 9.0 / 5.0) + 32;
+        cout << "Temperature in Fahrenheit = " << result << endl;
+    }
+    else if (choice == 2) {
+        cout << "Enter temperature in Fahrenheit: ";
+        cin >> temp;
+        result = (temp - 32) * 5.0 / 9.0;
+        cout << "Temperature in Celsius = " << result << endl;
+    }
+    else if (choice == 3) {
+        cout<< "Enter temperature in Celsius: ";
+        cin >> temp;
+        result = (273.15 + temp);
+        cout<<"Temperature in Kelvin = " << result << endl;
+    }
+    else if (choice == 4) {
+        cout << "Enter temperature in Kelvin = ";
+        cin >> temp;
+        result = (temp - 273.15);
+        cout<<"Temperature in Celsius = " << result << endl;
+    }
+    else {
+        cout << "Invalid choice!" << endl;
+    } 
+    return 0;
+}
